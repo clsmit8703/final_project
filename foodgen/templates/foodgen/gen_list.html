@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food in Oakwood</title>
+</head>
+<h2>Restaurants</h2>
+<ul>
+    {%  for food in object_list %}
+    <li>
+        Name: {{ food.name }}
+        Type: {{ food.utype }}
+        Price: {{ food.price|yesno:"Less than $10, More than $10" }}
+    </li>
+    {%  endfor %}
+</ul>
+</body>
+</html>
