@@ -20,26 +20,26 @@ class RandomView(generic.ListView):
 
 class RandomFastFoodView(generic.ListView):
     model = Gen
-    template_name = 'foodgen/random_fastfood.html'
+    template_name = 'foodgen/random.html'
     context_object_name = 'random_food'
     queryset = Gen.objects.filter(utype='fast food').order_by('?')[:1]
 
 
 class RandomSitDownView(generic.ListView):
     model = Gen
-    template_name = 'foodgen/random_sitdown.html'
+    template_name = 'foodgen/random.html'
     context_object_name = 'random_food'
     queryset = Gen.objects.filter(utype='sit down').order_by('?')[:1]
 
 
 class RandomLessThanView(generic.ListView):
     model = Gen
-    template_name = 'foodgen/random_lessthan10.html'
+    template_name = 'foodgen/random.html'
     context_object_name = 'random_food'
     queryset = Gen.objects.filter(price=True).order_by('?')[:1]
 
 class RandomMoreThanView(generic.ListView):
     model = Gen
-    template_name = 'foodgen/random_morethan10.html'
+    template_name = 'foodgen/random.html'
     context_object_name = 'random_food'
     queryset = Gen.objects.filter(price=False).order_by('?')[:1]

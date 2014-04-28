@@ -2,16 +2,86 @@
 <html>
 <head>
     <title>Where to Eat</title>
-</head>
-<h2>Today's Pick:</h2>
-<ul>
+  <body style=background-image:url('http://i.imgur.com/JEw3X53.png?1')
+</head><center>
+<h2 style="font-family:verdana;color:black">Today's Pick:</h2>
+<ul style="font-family:verdana;color:black">
     {%  for food in object_list %}
-    <li>
-        Name: {{ food.name }}
-        Type: {{ food.utype }}
+
+    <b>
+    {%  if food.name == "Buffalo's Southwest Cafe" %}
+        Name: <a href = "http://www.buffaloscafe.com/ourmenu.php">{{ food.name }}</a><br>
+        {% elif food.name == "La Parrilla" %}
+        Name: <a href = "http://laparrilla.com/food-type/quesadillas/">{{ food.name }}</a><br>
+        {% elif food.name == "Publix Deli" %}
+        Name: <a href = "http://www.publix.com/food/catalog/Deli/SubsAndWraps/Home.do">{{ food.name }}</a><br>
+        {% elif food.name == "Chick-fil-a" %}
+        Name: <a href = "http://www.chick-fil-a.com/food/menu">{{ food.name }}</a><br>
+        {% elif food.name == "J Buffalo Wing" %}
+        Name: <a href = "http://www.jbuffalowingsroswell.com/menu/">{{ food.name }}</a><br>
+        {% elif food.name == "Subway" %}
+        Name: <a href = "http://www.subway.com/menu/default.aspx">{{ food.name }}</a><br>
+        {% elif food.name == "Sonic" %}
+        Name: <a href = "http://www.sonicdrivein.com/Menu">{{ food.name }}</a><br>
+        {% elif food.name == "Krystal" %}
+        Name: <a href = "http://krystal.com/menu">{{ food.name }}</a><br>
+        {% elif food.name == "Wendy's" %}
+        Name: <a href = "http://www.wendys.com/">{{ food.name }}</a><br>
+        {% elif food.name == "Sonny's Real BBQ" %}
+        Name: <a href = "http://www.sonnysbbq.com/menu">{{ food.name }}</a><br>
+        {% elif food.name == "Curt's Restaurant" %}
+        Name: <a href = "http://www.curtsoakwood.com/">{{ food.name }}</a><br>
+        {% elif food.name == "McDonald's" %}
+        Name: <a href = "http://www.mcdonalds.com/us/en/food.html">{{ food.name }}</a><br>
+        {% elif food.name == "Waffle House" %}
+        Name: <a href = "https://www.wafflehouse.com/menu">{{ food.name }}</a><br>
+        {% elif food.name == "Dairy Queen" %}
+        Name: <a href = "http://www.dairyqueen.com/us-en/Menu/Full-Menu/">{{ food.name }}</a><br>
+        {% elif food.name == "El Sombero" %}
+        Name: <a href = "http://www.elsombrero.net/id35.html">{{ food.name }}</a><br>
+        {% elif food.name == "Firehouse Subs" %}
+        Name: <a href = "http://www.firehousesubs.com/OurMenu.aspx">{{ food.name }}</a><br>
+        {% elif food.name == "Napoli's Italian Restaurant" %}
+        Name: <a href = "http://www.napolispizzaga.com/our_menu.html">{{ food.name }}</a><br>
+        {% elif food.name == "Taco Bell" %}
+        Name: <a href = "http://www.tacobell.com/food/menu/breakfast-menu">{{ food.name }}</a><br>
+        {% elif food.name == "Dunkin Donuts" %}
+        Name: <a href = "http://www.dunkindonuts.com/content/dunkindonuts/en/menu.html">{{ food.name }}</a><br>
+        {% elif food.name == "Burger King" %}
+        Name: <a href = "http://www.bk.com/en/us/menu-nutrition/index.html">{{ food.name }}</a><br>
+        {% elif food.name == "KFC" %}
+        Name: <a href = "http://www.kfc.com/#">{{ food.name }}</a><br>
+        {% elif food.name == "Golden Buddha" %}
+        Name: <a href = "http://www.goldenbuddhaga.com/gh/menu.aspx?restaurant=1&location=..&meal=Korean%20Menu&category=1">{{ food.name }}</a><br>
+        {% elif food.name == "Steak & Shake" %}
+        Name: <a href = "http://www.steaknshake.com/menu">{{ food.name }}</a><br>
+        {% elif food.name == "Captain D's" %}
+        Name: <a href = "http://www.captainds.com/menu/promotion/">{{ food.name }}</a><br>
+        {% elif food.name == "Zaxby's" %}
+        Name: <a href = "http://www.zaxbys.com/menu_nutrition/the_menu.aspx">{{ food.name }}</a><br>
+        {% elif food.name == "Pizza Hut" %}
+        Name: <a href = "https://order.pizzahut.com/site/locations/georgia/oakwood/025710">{{ food.name }}</a><br>
+        {% elif food.name == "Sam's Club" %}
+        Name: <a href = "http://www.samsclub.com/sams/pagedetails/content.jsp?pageName=inClubcafe">{{ food.name }}</a><br>
+        {% elif food.name == "American Deli" %}
+        Name: <a href = "http://www.iloveamericandeli.com/">{{ food.name }}</a><br>
+        {% elif food.name == "Wasbi" %}
+        Name: <a href = "http://www2.beyondmenu.com/24772/flowery-branch/wasabi-japanese-restaurant-flowery-branch-30542.aspx?r=24772">{{ food.name }}</a><br>
+        {% elif food.name == "Marco's Pizza" %}
+        Name: <a href = "https://www.marcosorder.com/?store=8099">{{ food.name }}</a><br>
+        {% elif food.name == "Loretta's Country Kitchen" %}
+        Name: <a href = "http://lorettascountrykitchen.com/menu/">{{ food.name }}</a><br>
+        {% elif food.name == "Wang's Chinese" %}
+        Name: <a href = "http://www.wangsoakwoodga.com/">{{ food.name }}</a><br>
+
+        {% else %}
+        Name: {{ food.name }}<br>
+        {% endif %}
+        Type: {{ food.utype }}<br>
         Price: {{ food.price|yesno:"Less than $10, More than $10" }}
-    </li>
+    </b>
     {%  endfor %}
 </ul>
+</center>
 </body>
 </html>
