@@ -2,16 +2,36 @@
 <html>
 <head>
     <title>Food in Oakwood</title>
+    <style>
+table,th,td
+{
+border:1px solid black;
+}
+</style>
 </head>
-<h2>Restaurants</h2>
-<ul>
+<center>
+<body style= background-color:lightblue;>
+<table style=font-family:verdana;color:black>
+<tr>
+<th>Name</th>
+<th>Type</th>
+    <th>Price</th>
+</tr>
+
+
+<h2 style= "font-family:verdana;color:black">Restaurants</h2>
+   <tr style=font-family:verdana;color:black>
     {%  for food in object_list %}
-    <li>
-        Name: {{ food.name }}
-        Type: {{ food.utype }}
-        Price: {{ food.price|yesno:"Less than $10, More than $10" }}
-    </li>
+
+        <td style=font-family:verdana;color:black>{{ food.name }}</td>
+        <td style=font-family:verdana;color:black>{{ food.utype }}</td>
+        <td style=font-family:verdana;color:black>{{ food.price|yesno:"Less than $10, More than $10" }}</td></tr>
+
+
+
     {%  endfor %}
-</ul>
+</tr>
+</table>
+</center>
 </body>
 </html>
