@@ -1,1 +1,14 @@
-This file was created by PyCharm 2.7.3 for binding GitHub repository
+This is a random food generator for the UNG Gainesville Campus.
+You will first start at the welcome page. Below will be a drop down menu of the different gnerators you can choose from.
+
+-Anything!- Will randomize all of the restaurants in the database
+-Fast Food- Will randomize all the restaurants labeled as fast food
+-Sit Down- Will randomize all of the restaurants labeled as sit down
+-Less than $10- Will randomize all of the restaurants with the average meal less than $10
+-More than $10- Will randomize all of the restaurants with the average meal more than $10
+
+If you click on the text "UNG", it will take you to the map of UNG Gainesville
+
+If you click the text "?", it will take you to the full database.
+
+In addition, when you run the generator and the menu is in blue, it will link you to the company's menu.
