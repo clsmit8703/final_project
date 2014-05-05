@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><center>
+<head>
+    <title>Welcome to the Food Generator!</title>
+</head>
+<body>
+<body style=background-image:url('http://i.imgur.com/JEw3X53.png?1');background-repeat:no-repeat;padding-top:40px;>
+<h2 style="font-family:verdana;color:black"><a href="http://bit.ly/1lyWmID"style="color:black; text-decoration: none;"<a>UNG</a> Gainesville Restaurant Generator</h2>
+<h3 style="font-family:verdana;color:black">What are you in the mood for<a href= "/food" style="color:black; text-decoration: none;"<a>?</a></h3>
+<form name="jump">
+<p align="center">
+<select name="menu">
+<option selected>Choose One</option>
+<option value="/random">ANYTHING!</option>
+<option value="/random_fastfood">Fast Food</option>
+<option value="/random_sitdown">Sit Down</option>
+<option value="/random_lessthan10">Something less than $10</option>
+<option value="/random_morethan10">Something more than $10</option>
+</select>
+<input type="button" onClick="location=document.jump.menu.options[document.jump.menu.selectedIndex].value;" value="RANDOM">
+</p>
+</form>
+</center>
+</body>
+</html>
